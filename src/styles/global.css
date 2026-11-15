@@ -1,0 +1,204 @@
+@import url('https://googleapis.com');
+
+:root {
+    font-family: 'Inter', sans-serif;
+    color: #17231c;
+    background: #f5f7f5;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    --primary: #14532d;
+    --secondary: #059669;
+    --background: #f5f7f5;
+    --surface: #ffffff;
+    --text: #17231c;
+    --muted: #64748b;
+    --border: #e5ebe6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Contenedores */
+
+.page-container {
+    width: 100%;
+    max-width: 1450px;
+    margin: auto;
+    padding: 32px;
+}
+
+.page-header {
+    margin-bottom: 28px;
+}
+
+.page-header h1,
+.inventory-title {
+    margin: 0 0 8px;
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.page-header p {
+    color: var(--muted);
+    margin: 0;
+}
+
+/* Tarjetas */
+
+.eco-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 3px 12px rgba(20, 83, 45, 0.04);
+}
+
+/* Botones */
+
+.btn-eco {
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 9px;
+    padding: 11px 18px;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.btn-eco:hover {
+    background: #166534;
+    transform: translateY(-1px);
+}
+
+.btn-outline-eco {
+    background: white;
+    color: var(--primary);
+    border: 1px solid #bbd5c2;
+    border-radius: 9px;
+    padding: 10px 16px;
+}
+
+.module-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.module-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.module-navigation a {
+    text-decoration: none;
+}
+
+/* Formularios */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.form-control-eco {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #dce5de;
+    border-radius: 9px;
+    background: white;
+    color: var(--text) !important;
+    outline: none;
+    transition: .2s;
+}
+
+.form-control-eco option {
+    background: white;
+    color: var(--text);
+}
+
+.form-control-eco::placeholder {
+    color: var(--muted);
+}
+
+input[type="datetime-local"].form-control-eco,
+input[type="date"].form-control-eco {
+    color-scheme: light;
+}
+
+.form-control-eco:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, .12);
+}
+
+/* Tablas */
+
+.eco-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.eco-table th {
+    background: #f0f7f1;
+    color: var(--primary);
+    text-align: left;
+    padding: 14px;
+    font-size: 13px;
+}
+
+.eco-table td {
+    padding: 14px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    color: var(--text);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .page-container {
+        padding: 18px;
+    }
+
+    .page-header h1 {
+        font-size: 23px;
+    }
+
+    .eco-card {
+        padding: 17px;
+        overflow-x: auto;
+    }
+}
