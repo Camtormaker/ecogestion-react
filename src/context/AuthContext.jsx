@@ -33,12 +33,6 @@ export function AuthProvider({ children }) {
         "ecooperador",
         "ecooperadordecampo",
     ].includes(roleName);
-    const isAuditor = [
-        "auditor",
-        "directivo",
-        "ecoauditor",
-    ].includes(roleName);
-
     // Comprobar si existe una sesión
     useEffect(() => {
         const verifySession = async () => {
@@ -107,7 +101,7 @@ export function AuthProvider({ children }) {
                 login,
                 logout,
                 authenticated: !!user,
-                canAccessReact: isAdministrator || isOperator || isAuditor,
+                canAccessReact: isAdministrator || isOperator,
                 canWrite: isAdministrator || isOperator,
             }}
         >
